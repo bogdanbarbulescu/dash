@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Dashboard Theme</h1>
+
+        <div class="controls-area">
+            <div class="sliders-container">
+                <div class="slider-group">
+                    <label for="red-slider">Red: <span id="red-value">128</span></label>
+                    <input type="range" id="red-slider" min="0" max="255" value="128">
+                </div>
+                <div class="slider-group">
+                    <label for="green-slider">Green: <span id="green-value">128</span></label>
+                    <input type="range" id="green-slider" min="0" max="255" value="128">
+                </div>
+                <div class="slider-group">
+                    <label for="blue-slider">Blue: <span id="blue-value">128</span></label>
+                    <input type="range" id="blue-slider" min="0" max="255" value="128">
+                </div>
+                <div class="slider-group">
+                    <label for="alpha-slider">Alpha: <span id="alpha-value">1.00</span></label>
+                    <input type="range" id="alpha-slider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+
+            <div class="color-info-container">
+                <div class="live-swatch-container">
+                    <label>Preview:</label>
+                    <div id="live-color-swatch"></div>
+                </div>
+                <div class="hex-input-group">
+                    <label for="hex-input">HEX/RGBA:</label>
+                    <input type="text" id="hex-input" placeholder="#RRGGBB or rgba(...)">
+                    <span id="color-code-display">rgba(128, 128, 128, 1)</span>
+                </div>
+                <div class="action-buttons">
+                    <button id="copy-color-btn">Copy Color</button>
+                    <button id="reset-color-btn">Reset Colors</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="palettes-section">
+            <h2>Color Palettes</h2>
+            <div class="palettes-container" id="palettes-container">
+                <!-- Palettes will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Dashboard Layout -->
+        <div class="dashboard-preview-area">
+            <h2>Dashboard Preview</h2>
+            <div class="dashboard-layout" id="dashboard-layout">
+                <header class="dashboard-header" id="dashboard-header">
+                    <div class="logo">CompanyLogo</div>
+                    <nav>
+                        <span>Profile</span>
+                        <span>Settings</span>
+                        <span>Logout</span>
+                    </nav>
+                </header>
+                <aside class="dashboard-sidebar" id="dashboard-sidebar">
+                    <ul>
+                        <li>Dashboard</li>
+                        <li>Analytics</li>
+                        <li>Users</li>
+                        <li>Products</li>
+                        <li>Orders</li>
+                        <li>Settings</li>
+                    </ul>
+                </aside>
+                <main class="dashboard-main-content" id="dashboard-main-content">
+                    <h3>Main Content Title</h3>
+                    <p>This is the primary content area. Its background color will change. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="dashboard-widget">
+                        <h4>Widget/Stat</h4>
+                        <p>Some data here...</p>
+                        <button class="dashboard-action-button" id="dashboard-action-button">Primary Action</button>
+                    </div>
+                     <div class="dashboard-widget">
+                        <h4>Another Widget</h4>
+                        <p>More details...</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
